@@ -1,0 +1,7 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="30" y="60" width="140" height="40" rx="8" fill="#F5F6FA" stroke="#001F5F" stroke-width="2"/>
+  <rect x="50" y="70" width="100" height="20" rx="4" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+  <rect x="70" y="110" width="60" height="8" rx="4" fill="#0033CC"/>
+  <ellipse cx="100" cy="120" rx="22" ry="6" fill="#B0B3B8"/>
+  <text x="100" y="90" text-anchor="middle" font-size="16" font-family="Arial" fill="#001F5F">hp</text>
+</svg> 
