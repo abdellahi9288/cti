@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTI - Centre de Transition Numérique et d'Impression</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="placeholder-logo.svg">
 </head>
 <body>
@@ -15,17 +15,24 @@
             <div class="nav-logo">
                 <img src="CTI.png" alt="CTI Logo" class="logo" onerror="this.src='placeholder-logo.svg'">
                 <div class="logo-text">
-                    <h1 class="company-name-ar">مركز التحول الرقمي والطباعة</h1>
-                    <h2 class="company-name-fr">Centre de Transition Numérique et d'Impression</h2>
+                    <h1 class="company-name-ar" data-i18n="company_name_ar">مركز التحول الرقمي والطباعة</h1>
+                    <h2 class="company-name-fr" data-i18n="company_name_fr">Centre de Transition Numérique et d'Impression</h2>
                 </div>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Accueil</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#projects" class="nav-link">Projets</a>
-                <a href="#director" class="nav-link">Message du Directeur</a>
-                <a href="#gallery" class="nav-link">Galerie</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link" data-i18n="nav_home">Accueil</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Projets</a>
+                <a href="#director" class="nav-link" data-i18n="nav_director">Message du Directeur</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_gallery">Galerie</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+            </div>
+            <div class="nav-lang">
+                <select id="lang-switcher" aria-label="Language switcher">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                    <option value="ar">AR</option>
+                </select>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -39,10 +46,10 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title-ar">مركز التحول الرقمي والطباعة</h1>
-                <h2 class="hero-title-fr">Centre de Transition Numérique et d'Impression</h2>
-                <p class="hero-subtitle">Votre partenaire de confiance pour la transformation numérique</p>
-                <a href="#services" class="cta-button">Découvrir nos services</a>
+                <h1 class="hero-title-ar" data-i18n="company_name_ar">مركز التحول الرقمي والطباعة</h1>
+                <h2 class="hero-title-fr" data-i18n="company_name_fr">Centre de Transition Numérique et d'Impression</h2>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Votre partenaire de confiance pour la transformation numérique</p>
+                <a href="#services" class="cta-button" data-i18n="cta_services">Découvrir nos services</a>
             </div>
             <div class="hero-image">
                 <img src="CTI.png" alt="CTI Logo" class="hero-logo" onerror="this.src='placeholder-logo.svg'">
@@ -53,51 +60,51 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Nos Services</h2>
+            <h2 class="section-title" data-i18n="services_title">Nos Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="img/icons/web-mobile.svg" alt="Web & Mobile Development" width="64" height="64">
+                        <img src="img/services/Developpeur-Mobile.jpg" alt="Web & Mobile Development" width="64" height="64">
                     </div>
                     <div class="service-content">
-                        <h3>Développement Web & Mobile</h3>
-                        <p>Création de sites web modernes et d'applications mobiles performantes adaptées à vos besoins.</p>
+                        <h3 data-i18n="service_web_title">Développement Web & Mobile</h3>
+                        <p data-i18n="service_web_desc">Création de sites web modernes et d'applications mobiles performantes adaptées à vos besoins.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="img/icons/graphic-design.svg" alt="Graphic Design" width="64" height="64">
+                        <img src="img/services/design-graphique-etcdigital.webp" alt="Graphic Design" width="64" height="64">
                     </div>
                     <div class="service-content">
-                        <h3>Design Graphique</h3>
-                        <p>Conception de logos, identités visuelles et supports de communication professionnels.</p>
+                        <h3 data-i18n="service_design_title">Design Graphique</h3>
+                        <p data-i18n="service_design_desc">Conception de logos, identités visuelles et supports de communication professionnels.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="img/icons/networking.svg" alt="IT Networking" width="64" height="64">
+                        <img src="img/services/reseaux.jpg" alt="IT Networking" width="64" height="64">
                     </div>
                     <div class="service-content">
-                        <h3>Réseaux Informatiques</h3>
-                        <p>Installation, configuration et maintenance de réseaux informatiques sécurisés.</p>
+                        <h3 data-i18n="service_network_title">Réseaux Informatiques</h3>
+                        <p data-i18n="service_network_desc">Installation, configuration et maintenance de réseaux informatiques sécurisés.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="img/icons/hardware.svg" alt="Computer Hardware" width="64" height="64">
+                        <img src="img/services/47546837-materiel-reseau-dans-information-la-technologie-systemes-vectoriel.jpg" alt="Computer Hardware" width="64" height="64">
                     </div>
                     <div class="service-content">
-                        <h3>Matériel Informatique</h3>
-                        <p>Vente et maintenance de matériel informatique de qualité professionnelle.</p>
+                        <h3 data-i18n="service_hardware_title">Matériel Informatique</h3>
+                        <p data-i18n="service_hardware_desc">Vente et maintenance de matériel informatique de qualité professionnelle.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="img/icons/printing.svg" alt="Digital Printing" width="64" height="64">
+                        <img src="img/services/impression-sur-demande-printing-on-demand.jpg" alt="Digital Printing" width="64" height="64">
                     </div>
                     <div class="service-content">
-                        <h3>Impression Numérique</h3>
-                        <p>Services d'impression numérique haute qualité pour tous vos projets.</p>
+                        <h3 data-i18n="service_printing_title">Impression Numérique</h3>
+                        <p data-i18n="service_printing_desc">Services d'impression numérique haute qualité pour tous vos projets.</p>
                     </div>
                 </div>
             </div>
@@ -107,48 +114,48 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Nos Projets</h2>
+            <h2 class="section-title" data-i18n="projects_title">Nos Projets</h2>
             <div class="projects-gallery">
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+1" alt="Projet 1">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 1">
                     <div class="project-overlay">
-                        <h3>Site Web E-commerce</h3>
-                        <p>Développement d'une plateforme de vente en ligne complète</p>
+                        <h3 data-i18n="project1_title">Site Web E-commerce</h3>
+                        <p data-i18n="project1_desc">Développement d'une plateforme de vente en ligne complète</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+2" alt="Projet 2">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 2">
                     <div class="project-overlay">
-                        <h3>Application Mobile</h3>
-                        <p>Application mobile native pour gestion de stock</p>
+                        <h3 data-i18n="project2_title">Application Mobile</h3>
+                        <p data-i18n="project2_desc">Application mobile native pour gestion de stock</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+3" alt="Projet 3">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 3">
                     <div class="project-overlay">
-                        <h3>Réseau Entreprise</h3>
-                        <p>Infrastructure réseau pour entreprise de 50 employés</p>
+                        <h3 data-i18n="project3_title">Réseau Entreprise</h3>
+                        <p data-i18n="project3_desc">Infrastructure réseau pour entreprise de 50 employés</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+4" alt="Projet 4">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 4">
                     <div class="project-overlay">
-                        <h3>Identité Visuelle</h3>
-                        <p>Création de l'identité visuelle complète d'une startup</p>
+                        <h3 data-i18n="project4_title">Identité Visuelle</h3>
+                        <p data-i18n="project4_desc">Création de l'identité visuelle complète d'une startup</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+5" alt="Projet 5">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 5">
                     <div class="project-overlay">
-                        <h3>Impression Grand Format</h3>
-                        <p>Campagne d'affichage publicitaire pour événement</p>
+                        <h3 data-i18n="project5_title">Impression Grand Format</h3>
+                        <p data-i18n="project5_desc">Campagne d'affichage publicitaire pour événement</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Projet+6" alt="Projet 6">
+                    <img src="img/projet/COMPLETED-PROJECT-ICON-1.jpg" alt="Projet 6">
                     <div class="project-overlay">
-                        <h3>Système de Gestion</h3>
-                        <p>Développement d'un système de gestion intégré</p>
+                        <h3 data-i18n="project6_title">Système de Gestion</h3>
+                        <p data-i18n="project6_desc">Développement d'un système de gestion intégré</p>
                     </div>
                 </div>
             </div>
@@ -159,16 +166,14 @@
     <section id="director" class="director-message">
         <div class="container">
             <div class="message-content">
-                <h2 class="section-title">Message du Directeur</h2>
+                <h2 class="section-title" data-i18n="director_title">Message du Directeur</h2>
                 <div class="quote">
-                    <blockquote>"La technologie au service du progrès local."</blockquote>
+                    <blockquote data-i18n="director_quote">"La technologie au service du progrès local."</blockquote>
                 </div>
                 <div class="message-text">
-                    <p>Au Centre de Transition Numérique et d'Impression, nous croyons fermement que la technologie doit être un vecteur de développement et de progrès pour notre communauté locale. Notre mission est de démocratiser l'accès aux solutions numériques modernes tout en préservant l'identité et les valeurs de notre région.</p>
-                    
-                    <p>Depuis notre création, nous nous efforçons d'accompagner les entreprises, les organisations et les particuliers dans leur transformation numérique, en proposant des solutions adaptées, innovantes et durables. Notre équipe d'experts combine expertise technique et compréhension des enjeux locaux pour offrir des services de qualité supérieure.</p>
-                    
-                    <p>Nous sommes fiers de contribuer au développement économique et social de notre région en facilitant l'adoption des technologies numériques. Ensemble, construisons un avenir numérique inclusif et prospère.</p>
+                    <p data-i18n="director_msg1">Au Centre de Transition Numérique et d'Impression, nous croyons fermement que la technologie doit être un vecteur de développement et de progrès pour notre communauté locale. Notre mission est de démocratiser l'accès aux solutions numériques modernes tout en préservant l'identité et les valeurs de notre région.</p>
+                    <p data-i18n="director_msg2">Depuis notre création, nous nous efforçons d'accompagner les entreprises, les organisations et les particuliers dans leur transformation numérique, en proposant des solutions adaptées, innovantes et durables. Notre équipe d'experts combine expertise technique et compréhension des enjeux locaux pour offrir des services de qualité supérieure.</p>
+                    <p data-i18n="director_msg3">Nous sommes fiers de contribuer au développement économique et social de notre région en facilitant l'adoption des technologies numériques. Ensemble, construisons un avenir numérique inclusif et prospère.</p>
                 </div>
             </div>
         </div>
@@ -177,28 +182,31 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">Galerie</h2>
+            <h2 class="section-title" data-i18n="gallery_title">Galerie</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="img/gallery/apple-mac.svg" alt="Apple Mac">
-                    <div class="gallery-caption">Apple Mac</div>
+                    <img src="img/gallery/IMac_and_MacBook.jpg" alt="Apple Products">
+                    <div class="gallery-caption" data-i18n="gallery_mac_products">Produits Apple</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/gallery/hp-laptop.svg" alt="HP Laptop">
-                    <div class="gallery-caption">HP Laptop</div>
+                    <img src="img/gallery/c07945448_1750x1285.avif" alt="HP Laptop">
+                    <div class="gallery-caption" data-i18n="gallery_hp_laptop">Ordinateur Portable HP</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/gallery/accessory.svg" alt="Computer Accessory">
-                    <div class="gallery-caption">Accessoire informatique</div>
+                    <img src="img/gallery/lenovominipcs.webp" alt="Lenovo Mini PCs">
+                    <div class="gallery-caption" data-i18n="gallery_lenovo_mini">Mini PCs Lenovo</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Photo+4" alt="Galerie 4">
+                    <img src="img/gallery/optiplex-13-5-franchise-km5221w-1920x1440-mod3-expanded1.avif" alt="Dell Optiplex">
+                    <div class="gallery-caption" data-i18n="gallery_dell_optiplex">Dell Optiplex</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Photo+5" alt="Galerie 5">
+                    <img src="img/gallery/337734587_xxl3.jpg" alt="Accessories">
+                    <div class="gallery-caption" data-i18n="gallery_accessories">Accessoires</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300/001F5F/FFFFFF?text=Photo+6" alt="Galerie 6">
+                    <img src="img/gallery/ECA9Hipe6Kf7VjJmDBppVa-970-80.jp_.webp" alt="Printing Service">
+                    <div class="gallery-caption" data-i18n="gallery_printing">Service d'impression</div>
                 </div>
             </div>
         </div>
@@ -207,57 +215,57 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title" data-i18n="contact_title">Contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Informations de Contact</h3>
+                    <h3 data-i18n="contact_info_title">Informations de Contact</h3>
                     <div class="contact-item">
-                        <strong>Téléphone:</strong>
-                        <p>+212 XXX XXX XXX</p>
+                        <strong data-i18n="contact_phone_label">Téléphone:</strong>
+                        <p data-i18n="contact_phone">+222 36797986</p>
                     </div>
                     <div class="contact-item">
-                        <strong>Email:</strong>
-                        <p>contact@cti.ma</p>
+                        <strong data-i18n="contact_email_label">Email:</strong>
+                        <p data-i18n="contact_email">contact@cti.com</p>
                     </div>
                     <div class="contact-item">
-                        <strong>Adresse:</strong>
-                        <p>123 Rue de l'Innovation<br>Ville, Maroc</p>
+                        <strong data-i18n="contact_address_label">Adresse:</strong>
+                        <p data-i18n="contact_address">A cote immeuble ould mamy<br>Ville, Nouakchott</p>
                     </div>
                     <div class="contact-item">
-                        <strong>Horaires:</strong>
-                        <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi: 9h00 - 13h00</p>
+                        <strong data-i18n="contact_hours_label">Horaires:</strong>
+                        <p data-i18n="contact_hours">Lundi - Vendredi: 9h00 - 18h00<br>Samedi: 9h00 - 13h00</p>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Envoyez-nous un message</h3>
+                    <h3 data-i18n="contact_form_title">Envoyez-nous un message</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nom complet *</label>
+                            <label for="name" data-i18n="contact_form_name">Nom complet *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email" data-i18n="contact_form_email">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Téléphone</label>
+                            <label for="phone" data-i18n="contact_form_phone">Téléphone</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message *</label>
+                            <label for="message" data-i18n="contact_form_message">Message *</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                        <button type="submit" class="submit-btn" data-i18n="contact_form_submit">Envoyer le message</button>
                     </form>
                 </div>
             </div>
             <div class="map-placeholder">
-                <h3>Localisation</h3>
+                <h3 data-i18n="contact_map_title">Localisation</h3>
                 <div class="map-container">
-                    <p>Intégration Google Maps à venir</p>
+                    <p data-i18n="contact_map_coming">Intégration Google Maps à venir</p>
                     <div class="map-frame">
                         <div class="map-content">
-                            <span>📍 Carte interactive</span>
+                            <span data-i18n="contact_map_interactive">📍 Carte interactive</span>
                         </div>
                     </div>
                 </div>
@@ -273,25 +281,25 @@
                     <img src="CTI.png" alt="CTI Logo" class="footer-logo-img" onerror="this.src='placeholder-logo.svg'">
                     <div class="footer-text">
                         <h3>CTI</h3>
-                        <p>Centre de Transition Numérique et d'Impression</p>
+                        <p data-i18n="footer_company">Centre de Transition Numérique et d'Impression</p>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Liens rapides</h4>
-                    <a href="#services">Services</a>
-                    <a href="#projects">Projets</a>
-                    <a href="#contact">Contact</a>
+                    <h4 data-i18n="footer_links_title">Liens rapides</h4>
+                    <a href="#services" data-i18n="footer_link_services">Services</a>
+                    <a href="#projects" data-i18n="footer_link_projects">Projets</a>
+                    <a href="#contact" data-i18n="footer_link_contact">Contact</a>
                 </div>
                 <div class="footer-services">
-                    <h4>Services</h4>
-                    <a href="#services">Développement Web</a>
-                    <a href="#services">Design Graphique</a>
-                    <a href="#services">Réseaux IT</a>
-                    <a href="#services">Impression Numérique</a>
+                    <h4 data-i18n="footer_services_title">Services</h4>
+                    <a href="#services" data-i18n="footer_service_web">Développement Web</a>
+                    <a href="#services" data-i18n="footer_service_design">Design Graphique</a>
+                    <a href="#services" data-i18n="footer_service_network">Réseaux IT</a>
+                    <a href="#services" data-i18n="footer_service_printing">Impression Numérique</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 CTI - Centre de Transition Numérique et d'Impression. Tous droits réservés.</p>
+                <p data-i18n="footer_copyright">&copy; 2024 CTI - Centre de Transition Numérique et d'Impression. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
