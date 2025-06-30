@@ -637,81 +637,104 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0 10px;
+    }
+    .nav-logo {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    .logo-text h1, .logo-text h2 {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+    .nav-lang {
+        margin: 10px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #lang-switcher {
+        width: 100px;
+        font-size: 1rem;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+    }
+    .nav-toggle {
+        display: flex;
+        margin-left: 10px;
+        z-index: 1100;
+    }
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 80px;
         flex-direction: column;
         background-color: white;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 1050;
     }
-
     .nav-menu.active {
         left: 0;
     }
-
-    .nav-toggle {
-        display: flex;
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        display: block;
+        width: 100%;
     }
-
-    .nav-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
     }
-
     .hero-title-ar {
         font-size: 2rem;
     }
-
     .hero-title-fr {
         font-size: 1.8rem;
     }
-
     .hero-logo {
         width: 200px;
         height: 200px;
     }
-
     .services-grid {
         grid-template-columns: 1fr;
     }
-
     .projects-gallery {
         grid-template-columns: 1fr;
     }
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
     .section-title {
         font-size: 2rem;
     }
-
     .quote blockquote {
         font-size: 1.5rem;
     }
-
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .projects-gallery .project-item img {
+        width: 28px;
+        height: 28px;
+        margin-top: 10px;
+    }
+    .projects-gallery .project-item {
+        min-height: 60px;
     }
 }
 
@@ -719,24 +742,43 @@ h1, h2, h3, h4, h5, h6 {
     .container {
         padding: 0 15px;
     }
-
-    .hero-title-ar {
-        font-size: 1.5rem;
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 5px;
     }
-
-    .hero-title-fr {
-        font-size: 1.3rem;
+    .logo {
+        width: 32px;
+        height: 32px;
     }
-
+    .logo-text h1, .logo-text h2 {
+        font-size: 0.9rem;
+    }
+    .nav-lang {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #lang-switcher {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 6px 8px;
+    }
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+    .cta-button, .submit-btn {
+        font-size: 1rem;
+        padding: 12px 18px;
+        min-width: 120px;
+    }
     .section-title {
         font-size: 1.8rem;
     }
-
     .service-card,
     .project-item {
         margin: 0 10px;
     }
-
     .contact-form {
         padding: 1.5rem;
     }
@@ -782,4 +824,32 @@ textarea:focus {
     .section-title::after {
         display: none;
     }
+}
+
+/* Make buttons and select touch-friendly */
+.cta-button, .submit-btn, #lang-switcher {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 1.1rem;
+    touch-action: manipulation;
+}
+
+/* Ensure nav-toggle is always on top for accessibility */
+.nav-toggle {
+    z-index: 1200;
+}
+
+/* Make project images even smaller, like tiny icons */
+.projects-gallery .project-item img {
+    width: 36px;
+    height: 36px;
+    margin: 18px auto 0 auto;
+    border-radius: 8px;
+}
+.projects-gallery .project-item {
+    min-height: 80px;
+    padding-bottom: 0.5rem;
+}
+.projects-gallery .project-overlay {
+    padding: 0.5rem 0 0 0;
 } 
