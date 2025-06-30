@@ -88,19 +88,21 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 
-.company-name-ar {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #001F5F;
+.logo-text h1, .logo-text h2 {
     margin: 0;
+    line-height: 1;
+    font-weight: 500;
+    color: #001F5F;
+}
+
+.company-name-ar {
+    font-size: 0.7rem;
+    font-family: 'Noto Naskh Arabic', serif;
 }
 
 .company-name-fr {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     font-weight: 400;
-    color: #666;
-    margin: 0;
 }
 
 .nav-menu {
